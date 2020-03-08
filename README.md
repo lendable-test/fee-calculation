@@ -34,6 +34,11 @@ composer install
 ./bin/docker/build-image
 ``` 
 
+### Run container container
+```bash
+./bin/docker/setup
+``` 
+
 # Example
 ```php
 <?php
