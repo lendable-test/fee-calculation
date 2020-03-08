@@ -39,6 +39,11 @@ composer install
 ./bin/docker/setup
 ``` 
 
+### Install composer
+```bash
+./bin/docker/composer-install 
+``` 
+
 # Example
 ```php
 <?php
