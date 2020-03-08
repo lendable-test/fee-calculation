@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker build -t lendable_test:1.0 config/docker/image

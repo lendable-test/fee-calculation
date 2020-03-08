@@ -27,6 +27,13 @@ A database or any other external dependency is not required for this test.
 composer install
 ``` 
 
+## Docker
+
+### Build docker image
+```bash
+./bin/docker/build-image
+``` 
+
 # Example
 ```php
 <?php
