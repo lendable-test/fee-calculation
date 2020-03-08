@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="fee-calculation">
+    <target name="composer-install">
+        <exec executable="composer" failonerror="true">
+            <arg value='install' />
+        </exec>
+    </target>
+
+    <target name="composer-update">
+        <exec executable="composer" failonerror="true">
+            <arg value='update' />
+        </exec>
+    </target>
+</project>

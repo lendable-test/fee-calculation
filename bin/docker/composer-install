@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker exec -it fee-calculation_instance_1 ant -file /var/www/build.xml composer-install
