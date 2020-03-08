@@ -20,6 +20,20 @@ to your solution.
 Treat the packaged code as a template, if you feel that your solution can be
 improved with modifications to it then please go ahead.
 
+# Requirements
+* PHP 7.3
+
+## Dev requirements
+* PHP 7.3 xml, PHP 7.3 mbstring
+* Ant
+* Git
+* Composer
+
+## Docker
+Also, you can use Docker for everything.
+
+See instructions below...
+
 # Installation
 A database or any other external dependency is not required for this test.
 
@@ -54,17 +68,37 @@ composer install
 ./bin/docker/phpunit
 ``` 
 
+## Result
+```bash
+phpunit:
+     [exec] PHPUnit 9.0.0 by Sebastian Bergmann and contributors.
+     [exec] 
+     [exec] ...............................................................  63 / 210 ( 30%)
+     [exec] ............................................................... 126 / 210 ( 60%)
+     [exec] ............................................................... 189 / 210 ( 90%)
+     [exec] .....................                                           210 / 210 (100%)
+     [exec] 
+     [exec] Time: 454 ms, Memory: 4.00 MB
+     [exec] 
+     [exec] OK (210 tests, 223 assertions)
+``` 
+
 # Example
 ```php
 <?php
 
-use Lendable\Interview\Interpolation\Model\LoanModel;
+use Lendable\Interview\Interpolation\{
+    Model\LoanModel,
+    Service\AbstractService
+};
 
-$calculator = new FeeCalculator();
+$model = new LoanModel(24, 2750);
 
-$application = new LoanModel(24, 2750);
-$fee = $calculator->calculate($application);
+$fee = AbstractService::factory('feeCalculator')->calculate($model);
 // $fee = (float) 115.0
+
+$payment = AbstractService::factory('paymentCalculator')->calculate($model);
+// $payment = (float) 119.38
 ```
 
 # Fee Structure
