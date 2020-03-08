@@ -1,0 +1,4 @@
+instance:
+    build: config/docker/build
+    volumes:
+        - ./:/var/www
