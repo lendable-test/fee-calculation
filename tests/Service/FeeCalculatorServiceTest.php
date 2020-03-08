@@ -6,7 +6,7 @@ namespace Lendable\Interview\Interpolation\Tests;
 
 use Lendable\Interview\Interpolation\{
     Model\LoanModel,
-    Service\FeeCalculatorService,
+    Service\AbstractService,
     Component\Exception\ValidationException
 };
 use PHPUnit\Framework\TestCase;
@@ -40,9 +40,8 @@ class FeeCalculatorServiceTest extends TestCase
         }
 
         $loanModel = new LoanModel($term, $amount);
-        $service = new FeeCalculatorService();
-
-        $actualFee = $service->calculate($loanModel);
+        $actualFee = AbstractService::factory('feeCalculator')
+            ->calculate($loanModel);
 
         $this->assertSame($expectedFee, $actualFee);
     }
