@@ -8,7 +8,7 @@ namespace Lendable\Interview\Interpolation\Model;
  * A cut down version of a loan application containing
  * only the required properties for this test.
  */
-class LoanApplication
+class LoanModel
 {
     /**
      * @var int

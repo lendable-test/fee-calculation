@@ -58,11 +58,11 @@ composer install
 ```php
 <?php
 
-use Lendable\Interview\Interpolation\Model\LoanApplication;
+use Lendable\Interview\Interpolation\Model\LoanModel;
 
 $calculator = new FeeCalculator();
 
-$application = new LoanApplication(24, 2750);
+$application = new LoanModel(24, 2750);
 $fee = $calculator->calculate($application);
 // $fee = (float) 115.0
 ```
