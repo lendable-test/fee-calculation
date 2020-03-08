@@ -44,6 +44,16 @@ composer install
 ./bin/docker/composer-install 
 ``` 
 
+# Run Unit Tests
+```bash
+./bin/phpunit
+``` 
+
+## Docker
+```bash
+./bin/docker/phpunit
+``` 
+
 # Example
 ```php
 <?php

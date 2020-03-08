@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ant -file /var/www/build.xml phpunit

@@ -12,4 +12,13 @@
             <arg value='update' />
         </exec>
     </target>
+
+    <target name="phpunit">
+        <property name="path" value="tests"/>
+
+        <exec executable="php" failonerror="true">
+            <arg value='vendor/phpunit/phpunit/phpunit' />
+            <arg value='${path}' />
+        </exec>
+    </target>
 </project>
